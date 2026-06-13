@@ -1,0 +1,13 @@
+apiVersion: ark.mckinsey.com/v1alpha1
+kind: Query
+metadata:
+  name: datascienceio-team-query
+  labels:
+    project: datascienceio
+    type: sample
+    target: team
+spec:
+  input: "Hello! Can you help me understand what the datascienceio-team team can do for the datascienceio project?"
+  targets:
+    - type: team
+      name: datascienceio-team-team
