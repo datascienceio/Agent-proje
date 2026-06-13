@@ -1,0 +1,18 @@
+apiVersion: ark.mckinsey.com/v1alpha1
+kind: Team
+metadata:
+  name: datascienceio-team-team
+  labels:
+    project: datascienceio
+    strategy: collaborative
+    tier: basic
+spec:
+  description: datascienceio-team team for datascienceio project
+
+  members:
+    - name: crypto-risk-reviewer-agent
+      type: agent
+    - name: remediation-advisor-agent
+      type: agent
+  # Sequential strategy for single-agent teams
+  strategy: "sequential"
