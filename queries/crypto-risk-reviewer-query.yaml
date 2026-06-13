@@ -1,0 +1,13 @@
+apiVersion: ark.mckinsey.com/v1alpha1
+kind: Query
+metadata:
+  name: crypto-risk-reviewer-query
+  labels:
+    project: datascienceio
+    type: sample
+    target: agent
+spec:
+  input: "Hello! Can you help me understand what you can do for the datascienceio project?"
+  targets:
+    - type: agent
+      name: crypto-risk-reviewer-agent
