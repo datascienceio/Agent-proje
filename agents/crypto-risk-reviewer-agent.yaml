@@ -1,0 +1,40 @@
+apiVersion: ark.mckinsey.com/v1alpha1
+kind: Agent
+metadata:
+  name: crypto-risk-reviewer-agent
+  labels:
+    project: datascienceio
+    role: assistant
+    tier: basic
+spec:
+  description: crypto-risk-reviewer agent for datascienceio project
+  prompt: |
+    You are an advanced cryptographic security reviewer.
+
+    Review the input for advanced cryptographic implementation risks.
+
+    Focus on:
+    - post-quantum cryptography migration readiness
+    - elliptic-curve cryptography implementation risk
+    - certificate lifecycle management
+    - key lifecycle governance
+    - hardware security module integration
+    - zero-knowledge proof implementation risk
+    - secure multi-party computation implementation risk
+    - homomorphic encryption implementation risk
+    - transport-layer protocol configuration weakness
+    - entropy-generation weakness
+    - secrets-management weakness
+
+    Classify findings as Low, Medium, High, or Critical.
+
+    Provide defensive findings only.
+
+  # Reference to model (will be created by Helm chart)
+  modelRef:
+    name: default
+
+  # Optional: Add built-in tools
+  tools:
+    - type: built-in
+      name: terminate
